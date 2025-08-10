@@ -44,3 +44,674 @@ OUTPUT
 
 
 === Code Execution Successful ===
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Cost Calculator</title>
+</head>
+<body>
+
+<h2>Purchase Cost Calculator</h2>
+
+<form method="post">
+    <h3>Item 1</h3>
+    Price: <input type="number" step="0.01" name="price1" required>
+    Quantity: <input type="number" name="qty1" required>
+
+    <h3>Item 2</h3>
+    Price: <input type="number" step="0.01" name="price2" required>
+    Quantity: <input type="number" name="qty2" required>
+
+    <h3>Item 3</h3>
+    Price: <input type="number" step="0.01" name="price3" required>
+    Quantity: <input type="number" name="qty3" required>
+
+    <br><br>
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+5) <?php
+if (isset($_POST['calculate'])) {
+    // Get input values
+    $price1 = $_POST['price1'];
+    $qty1 = $_POST['qty1'];
+    $price2 = $_POST['price2'];
+    $qty2 = $_POST['qty2'];
+    $price3 = $_POST['price3'];
+    $qty3 = $_POST['qty3'];
+
+    // Calculate subtotal
+    $subtotal = ($price1 * $qty1) + ($price2 * $qty2) + ($price3 * $qty3);
+
+    // Calculate tax (10%)
+    $tax = $subtotal * 0.10;
+
+    // Calculate total cost
+    $total = $subtotal + $tax;
+
+    // Display results
+    echo "<h3>Results:</h3>";
+    echo "Subtotal: ₹" . number_format($subtotal, 2) . "<br>";
+    echo "Tax (10%): ₹" . number_format($tax, 2) . "<br>";
+    echo "Total Cost: ₹" . number_format($total, 2) . "<br>";
+}
+?>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Cost Calculator</title>
+</head>
+<body>
+
+<h2>Purchase Cost Calculator</h2>
+
+<form method="post">
+    <h3>Item 1</h3>
+    Price: <input type="number" step="0.01" name="price1" required>
+    Quantity: <input type="number" name="qty1" required>
+
+    <h3>Item 2</h3>
+    Price: <input type="number" step="0.01" name="price2" required>
+    Quantity: <input type="number" name="qty2" required>
+
+    <h3>Item 3</h3>
+    Price: <input type="number" step="0.01" name="price3" required>
+    Quantity: <input type="number" name="qty3" required>
+
+    <br><br>
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Cost Calculator</title>
+</head>
+<body>
+
+<h2>Purchase Cost Calculator</h2>
+
+<form method="post">
+    <h3>Item 1</h3>
+    Price: <input type="number" step="0.01" name="price1" required>
+    Quantity: <input type="number" name="qty1" required>
+
+    <h3>Item 2</h3>
+    Price: <input type="number" step="0.01" name="price2" required>
+    Quantity: <input type="number" name="qty2" required>
+
+    <h3>Item 3</h3>
+    Price: <input type="number" step="0.01" name="price3" required>
+    Quantity: <input type="number" name="qty3" required>
+
+    <br><br>
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Cost Calculator</title>
+</head>
+<body>
+
+<h2>Purchase Cost Calculator</h2>
+
+<form method="post">
+    <h3>Item 1</h3>
+    Price: <input type="number" step="0.01" name="price1" required>
+    Quantity: <input type="number" name="qty1" required>
+
+    <h3>Item 2</h3>
+    Price: <input type="number" step="0.01" name="price2" required>
+    Quantity: <input type="number" name="qty2" required>
+
+    <h3>Item 3</h3>
+    Price: <input type="number" step="0.01" name="price3" required>
+    Quantity: <input type="number" name="qty3" required>
+
+    <br><br>
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Cost Calculator</title>
+</head>
+<body>
+
+<h2>Purchase Cost Calculator</h2>
+
+<form method="post">
+    <h3>Item 1</h3>
+    Price: <input type="number" step="0.01" name="price1" required>
+    Quantity: <input type="number" name="qty1" required>
+
+    <h3>Item 2</h3>
+    Price: <input type="number" step="0.01" name="price2" required>
+    Quantity: <input type="number" name="qty2" required>
+
+    <h3>Item 3</h3>
+    Price: <input type="number" step="0.01" name="price3" required>
+    Quantity: <input type="number" name="qty3" required>
+
+    <br><br>
+    <input type="submit" name="calculate" value="Calculate">
+</form>
+
+
+</body>
+</html>
+
+6) <?php
+// Start session for session method
+session_start();
+$_SESSION['username'] = "John";
+
+// Set cookie for cookie method
+setcookie("username", "John", time() + 3600); // 1 hour expiry
+?>
+<!DOCTYPE html>
+<html>
+<head><title>Page 1</title></head>
+<body>
+
+<h2>Pass Data Between Pages in PHP</h2>
+
+<!-- GET Method -->
+<a href="page2.php?method=get&name=John&age=25">Go to Page 2 (GET)</a>
+<br><br>
+
+<!-- POST Method -->
+<form action="page2.php" method="post">
+    <input type="hidden" name="method" value="post">
+    Name: <input type="text" name="name" value="John"><br>
+    Age: <input type="number" name="age" value="25"><br>
+    <input type="submit" value="Go to Page 2 (POST)">
+</form>
+
+<br>
+
+<!-- SESSION Method -->
+<a href="page2.php?method=session">Go to Page 2 (SESSION)</a>
+<br><br>
+
+<!-- COOKIE Method -->
+<a href="page2.php?method=cookie">Go to Page 2 (COOKIE)</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head><title>Page 1</title></head>
+<body>
+
+<h2>Pass Data Between Pages in PHP</h2>
+
+<!-- GET Method -->
+<a href="page2.php?method=get&name=John&age=25">Go to Page 2 (GET)</a>
+<br><br>
+
+<!-- POST Method -->
+<form action="page2.php" method="post">
+    <input type="hidden" name="method" value="post">
+    Name: <input type="text" name="name" value="John"><br>
+    Age: <input type="number" name="age" value="25"><br>
+    <input type="submit" value="Go to Page 2 (POST)">
+</form>
+
+<br>
+
+<!-- SESSION Method -->
+<a href="page2.php?method=session">Go to Page 2 (SESSION)</a>
+<br><br>
+
+<!-- COOKIE Method -->
+<a href="page2.php?method=cookie">Go to Page 2 (COOKIE)</a>
+
+</body>
+</html>
+
+
+=== Code Execution Successful ===
+
+7)<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Form</title>
+</head>
+<body>
+
+<h2>Enter Your Name</h2>
+
+<form method="post">
+    Name: <input type="text" name="username">
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+<?php
+if (isset($_POST['submit'])) {
+    $name = trim($_POST['username']);
+
+    if ($name == "") {
+        echo "<p style='color:red;'>Error: Please enter your name.</p>";
+    } else {
+        echo "<h3>Hello, Welcome to Everyone!</h3>";
+        echo "<p>Have a nice day!!</p>";
+    }
+}
+?>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Form</title>
+</head>
+<body>
+
+<h2>Enter Your Name</h2>
+
+<form method="post">
+    Name: <input type="text" name="username">
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
+
+8) <?php
+function deal($costA, $sizeA, $costB, $sizeB) {
+    // Calculate cost per liter (Rs per liter)
+    $costPerLiterA = $costA / $sizeA;
+    $costPerLiterB = $costB / $sizeB;
+
+    echo "Cost per liter of Drink A: Rs. " . number_format($costPerLiterA, 2) . "<br>";
+    echo "Cost per liter of Drink B: Rs. " . number_format($costPerLiterB, 2) . "<br><br>";
+
+    if ($costPerLiterA < $costPerLiterB) {
+        echo "Choose Drink A to save money.";
+    } elseif ($costPerLiterB < $costPerLiterA) {
+        echo "Choose Drink B to save money.";
+    } else {
+        echo "Both drinks cost the same per liter.";
+    }
+}
+
+// Given values
+$costA = 25;
+$sizeA = 11;
+$costB = 23;
+$sizeB = 9;
+
+deal($costA, $sizeA, $costB, $sizeB);
+?>
+Cost per liter of Drink A: Rs. 2.27<br>Cost per liter of Drink B: Rs. 2.56<br><br>Choose Drink A to save money.
+
+=== Code Execution Successful ===
+
+9)$this = "this"; 
+$that = "that"; 
+$the_other = 2.2000000000; 
+
+print("$this,$not_set,$that+$the_other");
+$this = "this"; 
+$that = "that"; 
+$the_other = 2.2000000000; 
+
+print("$this,$not_set,$that+$the_other");
+
+
+=== Code Execution Successful ===
+
+9) <?php
+// Array of student marks
+$marks = [95, 82, 67, 54, 40, 28];
+
+foreach ($marks as $mark) {
+    echo "Marks: $mark → Grade: ";
+
+    if ($mark >= 90) {
+        echo "A+";
+    } elseif ($mark >= 80) {
+        echo "A";
+    } elseif ($mark >= 70) {
+        echo "B";
+    } elseif ($mark >= 60) {
+        echo "C";
+    } elseif ($mark >= 50) {
+        echo "D";
+    } elseif ($mark >= 35) {
+        echo "E";
+    } else {
+        echo "Fail";
+    }
+
+    echo "<br>";
+}
+?>
+Marks: 95 → Grade: A+<br>Marks: 82 → Grade: A<br>Marks: 67 → Grade: C<br>Marks: 54 → Grade: D<br>Marks: 40 → Grade: E<br>Marks: 28 → Grade: Fail<br>
+
+
+=== Code Execution Successful ===
+
+11) <?php
+$dayNumber = date("N"); // 1 (Mon) to 7 (Sun)
+
+switch ($dayNumber) {
+    case 1:
+        echo "Today is Monday";
+        break;
+    case 2:
+        echo "Today is Tuesday";
+        break;
+    case 3:
+        echo "Today is Wednesday";
+        break;
+    case 4:
+        echo "Today is Thursday";
+        break;
+    case 5:
+        echo "Today is Friday";
+        break;
+    case 6:
+        echo "Today is Saturday";
+        break;
+    case 7:
+        echo "Today is Sunday";
+        break;
+    default:
+        echo "Invalid day number!";
+}
+?>
+Today is Sunday
+
+=== Code Execution Successful ===
+
+<?php
+// Example marks
+$marks = 68; // You can change this value or take input from a form
+
+echo "Marks: $marks% → ";
+
+if ($marks >= 75) {
+    echo "First Class";
+} elseif ($marks >= 60 && $marks <= 74) {
+    echo "Second Class";
+} elseif ($marks >= 40 && $marks <= 59) {
+    echo "Third Class";
+} else {
+    echo "Fail";
+}
+?>
+Marks: 68% → Second Class
+
+=== Code Execution Successful ===
+13) $sub = substr(12345, 2, 2);
+echo "sub is $sub";
+$sub = substr(12345, 2, 2);
+echo "sub is $sub";
+
+
+=== Code Execution Successful ===
+$sub = substr(12345, 2, 2);
+echo "sub is $sub";
+
+15) <?php
+// Example number
+$number = 12345;
+$sum = 0;
+
+// Convert to string to loop through each digit
+$digits = str_split($number);
+
+foreach ($digits as $digit) {
+    $sum += $digit;
+}
+
+echo "The sum of the digits of $number is: $sum";
+?>
+
+
+
+
+=== Code Execution Successful ===
+
+16) <!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Two Numbers</title>
+</head>
+<body>
+
+<h2>Enter Two Numbers</h2>
+<form method="post">
+    Number 1: <input type="number" name="num1" required><br><br>
+    Number 2: <input type="number" name="num2" required><br><br>
+    <input type="submit" name="submit" value="Calculate Sum">
+</form>
+
+<?php
+// Function to calculate sum
+function addNumbers($a, $b) {
+    return $a + $b;
+}
+
+if (isset($_POST['submit'])) {
+    $n1 = $_POST['num1'];
+    $n2 = $_POST['num2'];
+    
+    $result = addNumbers($n1, $n2);
+    echo "<h3>Sum: $result</h3>";
+}
+?>
+
+</body>
+</html>
+The sum of the digits of 12345 is: 15
+
+
+=== Code Execution Successful ===
+18) <?php
+$var1 = "Hello";
+$var2 = null;
+
+if (isset($var1)) {
+    echo "var1 is set and not NULL<br>";
+}
+
+if (isset($var2)) {
+    echo "var2 is set and not NULL<br>";
+} else {
+    echo "var2 is either not set or is NULL<br>";
+}
+
+// Multiple variables check
+$var3 = 100;
+if (isset($var1, $var3)) {
+    echo "Both var1 and var3 are set and not NULL";
+}
+?>
+<?php
+$var1 = "Hello";
+$var2 = null;
+
+if (isset($var1)) {
+    echo "var1 is set and not NULL<br>";
+}
+
+if (isset($var2)) {
+    echo "var2 is set and not NULL<br>";
+} else {
+    echo "var2 is either not set or is NULL<br>";
+}
+
+// Multiple variables check
+$var3 = 100;
+if (isset($var1, $var3)) {
+    echo "Both var1 and var3 are set and not NULL";
+}
+?>
+<?php
+$var1 = "Hello";
+$var2 = null;
+
+if (isset($var1)) {
+    echo "var1 is set and not NULL<br>";
+}
+
+if (isset($var2)) {
+    echo "var2 is set and not NULL<br>";
+} else {
+    echo "var2 is either not set or is NULL<br>";
+}
+
+// Multiple variables check
+$var3 = 100;
+if (isset($var1, $var3)) {
+    echo "Both var1 and var3 are set and not NULL";
+}
+?>
+18) <?php
+$var1 = "Hello";
+$var2 = null;
+
+if (isset($var1)) {
+    echo "var1 is set and not NULL<br>";
+}
+
+if (isset($var2)) {
+    echo "var2 is set and not NULL<br>";
+} else {
+    echo "var2 is either not set or is NULL<br>";
+}
+
+// Multiple variables check
+$var3 = 100;
+if (isset($var1, $var3)) {
+    echo "Both var1 and var3 are set and not NULL";
+}
+?>
+var1 is set and not NULL<br>var2 is either not set or is NULL<br>Both var1 and var3 are set and not NULL
+
+=== Code Execution Successful ===
+19) <?php
+// Define the function to find highest and lowest values
+function findHighLow($numbers) {
+    $highest = max($numbers);
+    $lowest = min($numbers);
+    
+    return array('highest' => $highest, 'lowest' => $lowest);
+}
+
+// Example array of numbers
+$numberArray = array(10, 45, 2, 99, 7, 34, 65);
+
+// Call the function and get the result
+$result = findHighLow($numberArray);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>High & Low Finder</title>
+</head>
+<body>
+
+<h2>High
+<?php
+function findMinMax($numbers) {
+    $min = min($numbers);
+    $max = max($numbers);
+    return array("min" => $min, "max" => $max);
+}
+
+// Example array
+$numbersArray = array(45, 12, 98, 23, 67, 5, 89);
+
+$result = findMinMax($numbersArray);
+
+echo "Array: " . implode(", ", $numbersArray) . "<br>";
+echo "Lowest Value: " . $result['min'] . "<br>";
+echo "Highest Value: " . $result['max'];
+?>
+Array: 45, 12, 98, 23, 67, 5, 89<br>Lowest Value: 5<br>Highest Value: 98
+
+
+=== Code Execution Successful ===
+20) <!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form with Validation</title>
+</head>
+<body>
+
+<h2>Contact Us</h2>
+
+<?php
+$name = $email = $message = "";
+$nameErr = $emailErr = $messageErr = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["name"])) {
+        $nameErr = "Name is required";
+    } else {
+        $name = htmlspecialchars($_POST["name"]);
+    }
+
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+    } else {
+        $email = htmlspecialchars($_POST["email"]);
+    }
+
+    if (empty($_POST["message"])) {
+        $messageErr = "Message is required";
+    } else {
+        $message = htmlspecialchars($_POST["message"]);
+    }
+
+    if ($name && $email && $message) {
+        echo "<h3>Thank you, $name!</h3>";
+        echo "We have received your message and will reply to <strong>$email</strong> soon.";
+        exit;
+    }
+}
+?>
+
+<form method="post">
+    Name: <input type="text" name="name" value="<?php echo $name; ?>">
+    <span style="color:red;"><?php echo $nameErr; ?></span>
+    <br><br>
+
+    Email: <input type="email" name="email" value="<?php echo $email; ?>">
+    <span style="color:red;"><?php echo $emailErr; ?></span>
+    <br><br>
+
+    Message: <textarea name="message"><?php echo $message; ?></textarea>
+    <span style="color:red;"><?php echo $messageErr; ?></span>
+
+
+
+
+
+
+
+
+
